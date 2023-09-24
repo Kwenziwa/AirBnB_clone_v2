@@ -3,7 +3,7 @@
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String, ForeignKey, MetaData
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, 
+from sqlalchemy.orm import relationship
 
 if models.storage_t == 'db':
     place_amenity = Table('place_amenity', Base.metadata,
