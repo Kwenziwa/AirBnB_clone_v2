@@ -5,6 +5,7 @@ from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String, ForeignKey, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from os import environ
 
 if environ.get('HBNB_TYPE_STORAGE') == "db":
     place_amenity = Table('place_amenity', Base.metadata,
