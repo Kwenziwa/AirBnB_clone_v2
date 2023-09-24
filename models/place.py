@@ -1,11 +1,9 @@
 #!/usr/bin/python
-""" holds class Place"""
-import models
+"""This is the city class"""
 from models.base_model import BaseModel, Base
-from os import getenv
-import sqlalchemy
-from sqlalchemy import Column, String, Integer, Float, ForeignKey, Table
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Integer, String, ForeignKey, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship, 
 
 if models.storage_t == 'db':
     place_amenity = Table('place_amenity', Base.metadata,
